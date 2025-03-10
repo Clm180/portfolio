@@ -197,18 +197,119 @@ nav a:active {
 
 
 /* Centrer la vidéo et ajouter une bordure */
-.project-video {
-    text-align: center;
-    margin: 20px 0;
+/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 8rem;
 }
 
-.project-video video {
-    width: 80%;
-    max-width: 900px;
-    border: 5px solid var(--primary-color);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.project-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+    height: 446px;
+    position: relative;
 }
+
+.project-container2 {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+    height: 490px;
+
+}
+
+.project-video1 {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    margin-left: -30px; /* Décale la vidéo vers la gauche pour chevaucher le texte */
+}
+
+
+.project-video1 video {
+    width: 100%;
+    max-width: 1015px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 10px rgba(78, 91, 110, 0.3); /* Bordure floue */
+}
+
+
+.project-video2 {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    margin-right: -40px; /* Décale la vidéo vers la droite pour chevaucher le texte */
+}
+
+
+.project-video2 video {
+    width: 100%;
+    max-width: 990px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 10px rgba(78, 91, 110, 0.3); /* Bordure floue */
+}
+
+.project-description {
+    flex: 1;
+}
+
+
+
+.project-description p {
+    font-size: 1.1rem;
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+.project h3{
+    font-size: 2rem;
+
+}
+
+.technologies {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 1rem;
+}
+
+.text-container {
+    flex: 1;
+    z-index: 1;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    /* Centrage du texte verticalement */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Centrer le titre */
+.text-container h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+
 
 /* Footer */
 footer {
@@ -286,12 +387,12 @@ footer {
         font-size: 2rem;
     }
 
-    .grid {
+    .grid{
         padding: 0 1rem;
         grid-template-columns: 1fr;
     }
 
-    .cv-container {
+    .cv-wrapper {
         width: auto;
         height: auto;
     }
@@ -304,6 +405,37 @@ footer {
     .card {
         padding: 1.5rem;
     }
+
+    .project-container,
+    .project-container2 {
+        display: flex;
+        flex-direction: column; /* Aligner les éléments en colonne */
+        padding: 0 1rem;
+        height: auto;
+        width: auto;
+    }
+
+    .project-description {
+        margin-bottom: 20px; /* Ajouter de l'espace entre la description et la vidéo */
+    }
+
+    .project-video1,
+    .project-video2 {
+        margin-top: 20px; /* Espace entre la description et la vidéo */
+        width: 100%; /* Les vidéos prennent toute la largeur de leur conteneur */
+        display: flex;
+        justify-content: center; /* Centrer la vidéo si nécessaire */
+    }
+
+    .project-video1 video,
+    .project-video2 video {
+        margin-bottom: 20px; /* Espace sous la vidéo */
+        width: 100%; /* Ajuster la vidéo pour qu'elle prenne toute la largeur */
+        max-width: 100%; /* Pas de limite de largeur */
+        border-radius: 10px; /* Ajouter des bords arrondis aux vidéos */
+        box-shadow: 0 0 10px rgba(78, 91, 110, 0.3); /* Ombre légère autour de la vidéo */
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -326,7 +458,50 @@ footer {
     .card {
         padding: 1rem;
     }
+
+    .hero img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .buttons {
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+
+    .project-container,
+    .project-container2 {
+        padding: 1rem; /* Réduire le padding pour s'adapter à la petite taille d'écran */
+    }
+
+    .project-description p {
+        font-size: 1rem; /* Réduire la taille de la police pour mieux s'adapter */
+    }
+
+    /* Ajuster les vidéos pour petits écrans */
+    .project-video1,
+    .project-video2 {
+        margin-top: 20px; /* Ajouter un espace avant la vidéo */
+        margin-bottom: 20px; /* Ajouter un espace après la vidéo */
+        width: 100%; /* Les vidéos prennent toute la largeur */
+    }
+
+    .project-video1 video,
+    .project-video2 video {
+        width: 100%; /* Les vidéos s'adaptent à la largeur de l'écran */
+        max-width: 100%; /* Aucun dépassement de la largeur */
+        margin-bottom: 20px; /* Espacement sous la vidéo */
+    }
 }
+
 
 .section {
     opacity: 0;
@@ -338,3 +513,6 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+
+
