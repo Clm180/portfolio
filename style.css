@@ -410,10 +410,28 @@ footer {
         padding: 1.5rem;
     }
 
+    .project {
+        flex-direction: column; /* Empile les éléments en colonne */
+    }
+
+    .project-video1,
+    .project-video2 {
+        order: 2; /* Met la vidéo en dernier */
+        max-width: 100%; /* Ajuste la largeur */
+        margin: 1rem 0 0; /* Ajoute un espace en haut */
+    }
+
+    .text-container {
+        order: 1; /* Place le texte en premier */
+    }
+
 
 }
 
 @media (max-width: 480px) {
+    .cv-image {
+        display: none; /* Masque l'image du CV */
+    }
     .hero h1 {
         font-size: 1.8rem;
     }
@@ -426,11 +444,12 @@ footer {
         gap: 0.5rem;
     }
 
-    .grid {
+    .grid{
         padding: 0;
     }
 
-    .card {
+    .card,
+    .project{
         padding: 1rem;
     }
 
