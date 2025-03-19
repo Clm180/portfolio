@@ -1,8 +1,10 @@
 :root {
-    --primary-color: #4E5B6E; /* Bleu-gris foncé pour les éléments principaux */
-    --secondary-color: #BCC4D4; /* Bleu-gris clair pour les accents */
-    --light-color: #F5F6F8; /* Fond clair */
-    --dark-color: #2C3E50; /* Gris foncé pour le texte */
+    --primary-color: #0A192F; /* Bleu foncé tech */
+    --secondary-color: #112240; /* Bleu secondaire */
+    --light-color: #E6F1FF; /* Blanc cassé */
+    --accent-color: #00A8E8; /* Bleu électrique */
+    --neon-color: #64FFDA; /* Vert néon */
+    --blue-color: #3498db; /* Bleu classique */
     --font-family: 'Poppins', sans-serif;
 }
 
@@ -15,7 +17,7 @@
 
 body {
     background-color: var(--light-color);
-    color: var(--dark-color);
+    color: var(--primary-color);
     line-height: 1.6;
 }
 
@@ -276,7 +278,7 @@ nav a:active {
 
 .project-container p {
     font-size: 1.1rem;
-    color: var(--dark-color);
+    color: var(--primary-color);
     line-height: 1.6;
 }
 
